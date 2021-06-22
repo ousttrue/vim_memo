@@ -1,3 +1,8 @@
-# Summary
 
-- [Chapter 1](./chapter_1.md)
+[memo](./memo.md)
+
+# plugins
+
+- [dein](./plugins/dein.md)
+- [denite](./plugins/denite.md)
+
