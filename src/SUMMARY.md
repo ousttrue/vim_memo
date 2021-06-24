@@ -15,6 +15,7 @@
 - [dein](./plugins/dein.md)
 - [denite](./plugins/denite.md)
 - [git](./plugins/git.md)
+- [filetype](./plugins/filetype.md)
 
 # terminal
 
