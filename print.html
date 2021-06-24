@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="memo.html">memo</a></li><li class="chapter-item expanded affix "><li class="part-title">vim</li><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="nvim.html"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="plugins/dein.html"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="plugins/git.html"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded affix "><li class="part-title">terminal</li><li class="chapter-item expanded "><a href="terminal.html"><strong aria-hidden="true">7.</strong> terminal</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="lsp/coc.html"><strong aria-hidden="true">8.</strong> coc</a></li><li class="chapter-item expanded affix "><li class="part-title">rust</li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">9.</strong> rust</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="memo.html">memo</a></li><li class="chapter-item expanded affix "><li class="part-title">vim</li><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="nvim.html"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="plugins/dein.html"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="plugins/git.html"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded "><a href="plugins/filetype.html"><strong aria-hidden="true">7.</strong> filetype</a></li><li class="chapter-item expanded affix "><li class="part-title">terminal</li><li class="chapter-item expanded "><a href="terminal.html"><strong aria-hidden="true">8.</strong> terminal</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="lsp/coc.html"><strong aria-hidden="true">9.</strong> coc</a></li><li class="chapter-item expanded affix "><li class="part-title">rust</li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">10.</strong> rust</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -192,12 +192,13 @@ hi MatchParen ctermbg=239
 <p><code>%USERPROFILE%\AppData\Local\nvim\init.vim</code></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="keymap"><a class="header" href="#keymap">keymap</a></h1>
 <ul>
-<li><a href="https://h-miyako.hatenablog.com/entry/2014/01/20/053327">端末上のvimでctrl+space（ついでにプラグインの上書き回避）</a></li>
+<li><a href="https://deris.hatenablog.jp/entry/2013/05/02/192415">vimでキーマッピングする際に考えたほうがいいこと</a></li>
 </ul>
-<p><code>&lt;c-@&gt;</code> に変換されて insert される？</p>
-<ul>
-<li>https://vim.fandom.com/wiki/Avoid_the_escape_key</li>
-</ul>
+<h2 id="prefix"><a class="header" href="#prefix">prefix</a></h2>
+<pre><code class="language-vim">nnoremap [prefix] &lt;Nop&gt;
+nmap &lt;Space&gt; [prefix]
+nmap &lt;silent&gt; [prefix]n :&lt;C-u&gt;e ~/.config/nvim/init.vim&lt;CR&gt;
+</code></pre>
 <pre><code class="language-vim">imap &lt;Nul&gt; &lt;Nop&gt;
 inoremap &lt;C-Space&gt; &lt;c-x&gt;&lt;c-o&gt;
 imap &lt;C-@&gt; &lt;C-Space&gt;
@@ -207,37 +208,42 @@ nmap &lt;C-p&gt; :lprevious&lt;CR&gt;
 nnoremap &lt;C-l&gt; :nohlsearch&lt;CR&gt;&lt;C-l&gt;
 nnoremap q :close&lt;CR&gt; 
 </code></pre>
+<h2 id="memo-1"><a class="header" href="#memo-1">memo</a></h2>
+<ul>
+<li><a href="https://h-miyako.hatenablog.com/entry/2014/01/20/053327">端末上のvimでctrl+space（ついでにプラグインの上書き回避）</a></li>
+</ul>
+<p><code>&lt;c-@&gt;</code> に変換されて insert される？</p>
+<ul>
+<li>https://vim.fandom.com/wiki/Avoid_the_escape_key</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dein"><a class="header" href="#dein">dein</a></h1>
-<pre><code class="language-init.vim">let s:dein_dir = expand('~/.cache/dein')
+<p>init.vim</p>
+<pre><code class="language-vim">let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if &amp;runtimepath !~# '/dein.vim'
-	if !isdirectory(s:dein_repo_dir)
-		execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-	endif
-	execute 'set runtimepath^=' . s:dein_repo_dir
+    if !isdirectory(s:dein_repo_dir)
+        execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+    endif
+    execute 'set runtimepath^=' . s:dein_repo_dir
 endif
 
 if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+    call dein#begin(s:dein_dir)
 
-  let g:rc_dir    = expand('~/.config/nvim')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+    let g:rc_dir    = expand('~/.config/nvim')
+    let s:toml      = g:rc_dir . '/dein.toml'
+    call dein#load_toml(s:toml,      {'lazy': 0})
+    &quot; let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+    &quot; call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  &quot;call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
+    call dein#end()
+    call dein#save_state()
 endif
 
 if dein#check_install()
-  call dein#install()
+    call dein#install()
 endif
-
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-set ts=4 sw=4 sts=4 expandtab
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="denite"><a class="header" href="#denite">denite</a></h1>
 <p><a href="https://github.com/Shougo/denite.nvim">https://github.com/Shougo/denite.nvim</a></p>
@@ -245,6 +251,30 @@ set ts=4 sw=4 sts=4 expandtab
 <p>dein.toml</p>
 <pre><code class="language-toml">[[plugins]]
 repo = 'Shougo/denite.nvim'
+hook_add = '''
+&quot; Define mappings
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+	nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; &lt;CR&gt;
+				\ denite#do_map('do_action')
+	nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; d
+				\ denite#do_map('do_action', 'delete')
+	nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; p
+				\ denite#do_map('do_action', 'preview')
+	nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; q
+				\ denite#do_map('quit')
+	nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; i
+				\ denite#do_map('open_filter_buffer')
+	nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; &lt;Space&gt;
+				\ denite#do_map('toggle_select').'j'
+endfunction
+
+call denite#custom#var('file/rec', 'command',['rg', '--files', '--glob', '!.git'])
+call denite#custom#var('grep', 'command', ['rg', '--threads', '1'])
+nmap &lt;silent&gt; [prefix]&lt;Space&gt; :&lt;C-u&gt;DeniteProjectDir -buffer-name=files file/rec buffer&lt;CR&gt;
+nmap &lt;silent&gt; [prefix]b :&lt;C-u&gt;Denite buffer&lt;CR&gt;
+nmap &lt;silent&gt; [prefix]g :&lt;C-u&gt;Denite ghq&lt;CR&gt;
+'''
 </code></pre>
 <ul>
 <li>https://secret-garden.hatenablog.com/entry/2021/05/16/152715</li>
@@ -281,6 +311,7 @@ repo = 'Shougo/denite.nvim'
 <li>https://blog.yuku-t.com/entry/20110427/1303868482</li>
 </ul>
 <h2 id="vim-gitgutter"><a class="header" href="#vim-gitgutter">vim-gitgutter</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="filetype"><a class="header" href="#filetype">filetype</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="terminal"><a class="header" href="#terminal">terminal</a></h1>
 <p><a href="https://zenn.dev/ryo_kawamata/articles/improve-neovmi-terminal">https://zenn.dev/ryo_kawamata/articles/improve-neovmi-terminal</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="coc"><a class="header" href="#coc">coc</a></h1>
