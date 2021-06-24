@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>dein</title>
+        <title>git</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../memo.html">memo</a></li><li class="chapter-item expanded affix "><li class="part-title">vim</li><li class="chapter-item expanded "><a href="../vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="../nvim.html"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="../keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="../plugins/dein.html" class="active"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="../plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="../plugins/git.html"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded affix "><li class="part-title">terminal</li><li class="chapter-item expanded "><a href="../terminal.html"><strong aria-hidden="true">7.</strong> terminal</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="../lsp/coc.html"><strong aria-hidden="true">8.</strong> coc</a></li><li class="chapter-item expanded affix "><li class="part-title">rust</li><li class="chapter-item expanded "><a href="../rust.html"><strong aria-hidden="true">9.</strong> rust</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../memo.html">memo</a></li><li class="chapter-item expanded affix "><li class="part-title">vim</li><li class="chapter-item expanded "><a href="../vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="../nvim.html"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="../keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="../plugins/dein.html"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="../plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="../plugins/git.html" class="active"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded affix "><li class="part-title">terminal</li><li class="chapter-item expanded "><a href="../terminal.html"><strong aria-hidden="true">7.</strong> terminal</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="../lsp/coc.html"><strong aria-hidden="true">8.</strong> coc</a></li><li class="chapter-item expanded affix "><li class="part-title">rust</li><li class="chapter-item expanded "><a href="../rust.html"><strong aria-hidden="true">9.</strong> rust</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,48 +143,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="dein"><a class="header" href="#dein">dein</a></h1>
-<pre><code class="language-init.vim">let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
-if &amp;runtimepath !~# '/dein.vim'
-	if !isdirectory(s:dein_repo_dir)
-		execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-	endif
-	execute 'set runtimepath^=' . s:dein_repo_dir
-endif
-
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-
-  let g:rc_dir    = expand('~/.config/nvim')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
-
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  &quot;call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
-
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-set ts=4 sw=4 sts=4 expandtab
-</code></pre>
+                        <h1 id="git"><a class="header" href="#git">git</a></h1>
+<ul>
+<li><a href="https://qiita.com/kitagry/items/164abf1518c26def51bf">VimでGitの環境を整える</a></li>
+<li><a href="https://qiita.com/sgur/items/63d09ad3185cc3f92819">VimプラグインのGit界隈について</a></li>
+</ul>
+<h2 id="vim-fugitive"><a class="header" href="#vim-fugitive">vim-fugitive</a></h2>
+<p><a href="https://github.com/tpope/vim-fugitive">https://github.com/tpope/vim-fugitive</a></p>
+<ul>
+<li>https://qiita.com/tashua314/items/35521f9bada5fe00cca7</li>
+<li>https://myenigma.hatenablog.com/entry/2016/07/10/084048</li>
+<li>https://blog.yuku-t.com/entry/20110427/1303868482</li>
+</ul>
+<h2 id="vim-gitgutter"><a class="header" href="#vim-gitgutter">vim-gitgutter</a></h2>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../keymap.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../plugins/denite.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../plugins/denite.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../terminal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -194,11 +175,11 @@ set ts=4 sw=4 sts=4 expandtab
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../keymap.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../plugins/denite.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../plugins/denite.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../terminal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

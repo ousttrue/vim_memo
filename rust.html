@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>dein</title>
+        <title>rust</title>
                 
 
         <!-- Custom HTML head -->
@@ -14,21 +14,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-                <link rel="icon" href="../favicon.svg">
-                        <link rel="shortcut icon" href="../favicon.png">
-                <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-                <link rel="stylesheet" href="../css/print.css" media="print">
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
         
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
         
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -36,7 +36,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "../";
+            var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../memo.html">memo</a></li><li class="chapter-item expanded affix "><li class="part-title">vim</li><li class="chapter-item expanded "><a href="../vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="../nvim.html"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="../keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="../plugins/dein.html" class="active"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="../plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="../plugins/git.html"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded affix "><li class="part-title">terminal</li><li class="chapter-item expanded "><a href="../terminal.html"><strong aria-hidden="true">7.</strong> terminal</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="../lsp/coc.html"><strong aria-hidden="true">8.</strong> coc</a></li><li class="chapter-item expanded affix "><li class="part-title">rust</li><li class="chapter-item expanded "><a href="../rust.html"><strong aria-hidden="true">9.</strong> rust</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="memo.html">memo</a></li><li class="chapter-item expanded affix "><li class="part-title">vim</li><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="nvim.html"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="plugins/dein.html"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="plugins/git.html"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded affix "><li class="part-title">terminal</li><li class="chapter-item expanded "><a href="terminal.html"><strong aria-hidden="true">7.</strong> terminal</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="lsp/coc.html"><strong aria-hidden="true">8.</strong> coc</a></li><li class="chapter-item expanded affix "><li class="part-title">rust</li><li class="chapter-item expanded "><a href="rust.html" class="active"><strong aria-hidden="true">9.</strong> rust</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -114,7 +114,7 @@
                     <h1 class="menu-title"></h1>
 
                     <div class="right-buttons">
-                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                                                                         
@@ -143,50 +143,31 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="dein"><a class="header" href="#dein">dein</a></h1>
-<pre><code class="language-init.vim">let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
-if &amp;runtimepath !~# '/dein.vim'
-	if !isdirectory(s:dein_repo_dir)
-		execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-	endif
-	execute 'set runtimepath^=' . s:dein_repo_dir
-endif
-
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-
-  let g:rc_dir    = expand('~/.config/nvim')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
-
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  &quot;call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
-
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-set ts=4 sw=4 sts=4 expandtab
-</code></pre>
+                        <h1 id="rust"><a class="header" href="#rust">rust</a></h1>
+<h2 id="rust-analyzer"><a class="header" href="#rust-analyzer">rust-analyzer</a></h2>
+<ul>
+<li>
+<p><a href="https://rust-analyzer.github.io/">https://rust-analyzer.github.io/</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/0yoyoyo/items/08af21f25d6dd1602d43">rust-analyzerをVimで使う</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/takezawa_masatoshi/items/b8a69cffd5eb861aa2c9">NeovimにRustの開発環境を構築する</a></p>
+</li>
+<li>
+<p><a href="https://yhara.jp/2020/07/14/vim-rls">yhara.jp</a></p>
+</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../keymap.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="lsp/coc.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../plugins/denite.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -194,13 +175,10 @@ set ts=4 sw=4 sts=4 expandtab
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../keymap.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="lsp/coc.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../plugins/denite.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>
@@ -213,13 +191,13 @@ set ts=4 sw=4 sts=4 expandtab
         </script>
         
         
-                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
         
-        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
