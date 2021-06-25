@@ -1,5 +1,7 @@
 # dein
 
+* [[dein.vim] hook の便利な使い方](https://qiita.com/delphinus/items/cd221a450fd23506e81a)
+
 init.vim
 ```vim
 let s:dein_dir = expand('~/.cache/dein')
@@ -18,8 +20,8 @@ if dein#load_state(s:dein_dir)
     let g:rc_dir    = expand('~/.config/nvim')
     let s:toml      = g:rc_dir . '/dein.toml'
     call dein#load_toml(s:toml,      {'lazy': 0})
-    " let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
-    " call dein#load_toml(s:lazy_toml, {'lazy': 1})
+    let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+    call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
     call dein#end()
     call dein#save_state()

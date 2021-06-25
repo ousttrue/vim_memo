@@ -1,6 +1,3 @@
-
-[memo](./memo.md)
-
 # vim
 
 - [vim](./vim.md)
@@ -15,18 +12,28 @@
 - [dein](./plugins/dein.md)
 - [denite](./plugins/denite.md)
 - [git](./plugins/git.md)
-- [filetype](./plugins/filetype.md)
-
-# terminal
-
-- [terminal](./terminal.md)
+- [comment](./plugins/comment.md)
 
 # lsp(LanguageServerProtocol)
 
-- [coc](./lsp/coc.md)
+- [lsp](./lsp/lsp.md)
 
+# filetype
 
-# rust
+- [filetype](./filetype/filetypes.md)
+- [rust](./filetype/rust.md)
 
-- [rust](./rust.md)
+# completion
+
+- [completion](./completion.md)
+
+# other
+
+- [terminal](./terminal.md)
+- [colorschema](./colorschema.md)
+- [buffer](./buffer.md)
+- [quickfix](./quickfix.md)
+- [autocmd](./autocmd.md)
+- [fold](./fold.md)
+- [signcolumn](./signcolumn.md)
 
