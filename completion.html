@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>nvim</title>
+        <title>completion</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="nvim.html" class="active"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="plugins/dein.html"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="plugins/git.html"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded "><a href="plugins/comment.html"><strong aria-hidden="true">7.</strong> comment</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="lsp/lsp.html"><strong aria-hidden="true">8.</strong> lsp</a></li><li class="chapter-item expanded affix "><li class="part-title">filetype</li><li class="chapter-item expanded "><a href="filetype/filetypes.html"><strong aria-hidden="true">9.</strong> filetype</a></li><li class="chapter-item expanded "><a href="filetype/rust.html"><strong aria-hidden="true">10.</strong> rust</a></li><li class="chapter-item expanded affix "><li class="part-title">completion</li><li class="chapter-item expanded "><a href="completion.html"><strong aria-hidden="true">11.</strong> completion</a></li><li class="chapter-item expanded affix "><li class="part-title">other</li><li class="chapter-item expanded "><a href="terminal.html"><strong aria-hidden="true">12.</strong> terminal</a></li><li class="chapter-item expanded "><a href="colorschema.html"><strong aria-hidden="true">13.</strong> colorschema</a></li><li class="chapter-item expanded "><a href="buffer.html"><strong aria-hidden="true">14.</strong> buffer</a></li><li class="chapter-item expanded "><a href="quickfix.html"><strong aria-hidden="true">15.</strong> quickfix</a></li><li class="chapter-item expanded "><a href="autocmd.html"><strong aria-hidden="true">16.</strong> autocmd</a></li><li class="chapter-item expanded "><a href="fold.html"><strong aria-hidden="true">17.</strong> fold</a></li><li class="chapter-item expanded "><a href="signcolumn.html"><strong aria-hidden="true">18.</strong> signcolumn</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">1.</strong> vim</a></li><li class="chapter-item expanded "><a href="nvim.html"><strong aria-hidden="true">2.</strong> nvim</a></li><li class="chapter-item expanded affix "><li class="part-title">keymap</li><li class="chapter-item expanded "><a href="keymap.html"><strong aria-hidden="true">3.</strong> keymap</a></li><li class="chapter-item expanded affix "><li class="part-title">plugins</li><li class="chapter-item expanded "><a href="plugins/dein.html"><strong aria-hidden="true">4.</strong> dein</a></li><li class="chapter-item expanded "><a href="plugins/denite.html"><strong aria-hidden="true">5.</strong> denite</a></li><li class="chapter-item expanded "><a href="plugins/git.html"><strong aria-hidden="true">6.</strong> git</a></li><li class="chapter-item expanded "><a href="plugins/comment.html"><strong aria-hidden="true">7.</strong> comment</a></li><li class="chapter-item expanded affix "><li class="part-title">lsp(LanguageServerProtocol)</li><li class="chapter-item expanded "><a href="lsp/lsp.html"><strong aria-hidden="true">8.</strong> lsp</a></li><li class="chapter-item expanded affix "><li class="part-title">filetype</li><li class="chapter-item expanded "><a href="filetype/filetypes.html"><strong aria-hidden="true">9.</strong> filetype</a></li><li class="chapter-item expanded "><a href="filetype/rust.html"><strong aria-hidden="true">10.</strong> rust</a></li><li class="chapter-item expanded affix "><li class="part-title">completion</li><li class="chapter-item expanded "><a href="completion.html" class="active"><strong aria-hidden="true">11.</strong> completion</a></li><li class="chapter-item expanded affix "><li class="part-title">other</li><li class="chapter-item expanded "><a href="terminal.html"><strong aria-hidden="true">12.</strong> terminal</a></li><li class="chapter-item expanded "><a href="colorschema.html"><strong aria-hidden="true">13.</strong> colorschema</a></li><li class="chapter-item expanded "><a href="buffer.html"><strong aria-hidden="true">14.</strong> buffer</a></li><li class="chapter-item expanded "><a href="quickfix.html"><strong aria-hidden="true">15.</strong> quickfix</a></li><li class="chapter-item expanded "><a href="autocmd.html"><strong aria-hidden="true">16.</strong> autocmd</a></li><li class="chapter-item expanded "><a href="fold.html"><strong aria-hidden="true">17.</strong> fold</a></li><li class="chapter-item expanded "><a href="signcolumn.html"><strong aria-hidden="true">18.</strong> signcolumn</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,22 +143,96 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="nvim"><a class="header" href="#nvim">nvim</a></h1>
-<p><a href="https://neovim.io/">https://neovim.io/</a></p>
-<p><code>:echo $VIM</code></p>
-<p><code>~/.config/nvim/init.vim</code></p>
-<p><code>%USERPROFILE%\AppData\Local\nvim\init.vim</code></p>
-<h2 id="frontend"><a class="header" href="#frontend">frontend</a></h2>
+                        <h1 id="completion"><a class="header" href="#completion">completion</a></h1>
+<h2 id="omnifunc"><a class="header" href="#omnifunc">omnifunc</a></h2>
+<p>http://vimdoc.sourceforge.net/htmldoc/version7.html#new-omni-completion
+https://vim.fandom.com/wiki/Omni_completion
+https://vim.fandom.com/wiki/Omni_completion_popup_menu</p>
+<p>インテリセンスみたいな文脈を考慮した補完。素の completion とのインターフェース上の違いは？</p>
+<p>code:.vim
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete</p>
+<blockquote>
+<p><code>&lt;C-X&gt;&lt;C-O&gt;</code> while open in Insert mode</p>
+</blockquote>
+<p>[* vim-lsp]
+https://qiita.com/yami_beta/items/1bb1341113e12bcfb1b8</p>
+<p>[* 補完関数の実装]
+[Vim の complete-functions でハマった http://d.hatena.ne.jp/osyo-manga/20140806/1407291600]</p>
+<p>[* 補完の呼び出し]
+vimに以下の種類の挿入モード補完がある
+Whole lines						|i_CTRL-X_CTRL-L|
+keywords in the current file				|i_CTRL-X_CTRL-N|
+keywords in 'dictionary'				|i_CTRL-X_CTRL-K|
+keywords in 'thesaurus', thesaurus-style		|i_CTRL-X_CTRL-T|
+keywords in the current and included files		|i_CTRL-X_CTRL-I|
+tags							|i_CTRL-X_CTRL-]|
+file names						|i_CTRL-X_CTRL-F|
+definitions or macros				|i_CTRL-X_CTRL-D|
+Vim command-line					|i_CTRL-X_CTRL-V|
+User defined completion				|i_CTRL-X_CTRL-U|
+omni completion					|i_CTRL-X_CTRL-O|
+Spelling suggestions				|i_CTRL-X_s|
+keywords in 'complete'				|i_CTRL-N| |i_CTRL-P| これしか使ってなかった</p>
+<p>https://www.xmisao.com/2014/05/04/vim-completefunc.html
+https://github.com/neoclide/coc.nvim</p>
+<p>[* 起動方法で異なる補完が出る]</p>
+<p>File completion: <C-X><C-F>
+Line completion: <C-X><C-L>
+Omni completion: <C-X><C-O></p>
+<p>どの補完を使うか考えずに使いたい</p>
+<pre><code>deoplete 複数のソースを統合する。強い
+一方で十分な量のバッファが開かれていればの `C-n` `C-p` で十分強い。むしろこれより弱くしたくない。
+</code></pre>
+<p>[* complete]
+<code>set complete=.,w,b,u,t</code></p>
+<p>[* completeopt]
+<code>set completeopt+=menu,preview</code></p>
+<p>[* pumvisible]
+<code>pumvisible()</code>  pop up menu のことらしい</p>
+<p>code:.vim
+inoremap <expr> <Esc>      pumvisible() ? &quot;&lt;C-e&gt;&quot; : &quot;&lt;Esc&gt;&quot;
+inoremap <expr> <CR>       pumvisible() ? &quot;&lt;C-y&gt;&quot; : &quot;&lt;CR&gt;&quot;
+inoremap <expr> <Down>     pumvisible() ? &quot;&lt;C-n&gt;&quot; : &quot;&lt;Down&gt;&quot;
+inoremap <expr> <Up>       pumvisible() ? &quot;&lt;C-p&gt;&quot; : &quot;&lt;Up&gt;&quot;
+inoremap <expr> <PageDown> pumvisible() ? &quot;&lt;PageDown&gt;&lt;C-p&gt;&lt;C-n&gt;&quot; : &quot;&lt;PageDown&gt;&quot;
+inoremap <expr> <PageUp>   pumvisible() ? &quot;&lt;PageUp&gt;&lt;C-p&gt;&lt;C-n&gt;&quot; : &quot;&lt;PageUp&gt;&quot;</p>
+<p>[* keyword]
+<code>C-N</code>, <code>C-P</code>
+<code>help i^n, i^p</code> </p>
+<p>[* 対象を自動で振り分ける例]
+https://vim.fandom.com/wiki/Smart_mapping_for_tab_completion</p>
+<p>code:.vim
+function! Smart_TabComplete()
+let line = getline('.')                         &quot; current line</p>
+<p>let substr = strpart(line, -1, col('.')+1)      &quot; from the start of the current
+&quot; line to one character right
+&quot; of the cursor
+let substr = matchstr(substr, &quot;<sup class="footnote-reference"><a href="# \t">1</a></sup>*$&quot;)       &quot; word till cursor
+if (strlen(substr)==0)                          &quot; nothing to match on empty string
+return &quot;&lt;tab&gt;&quot;
+endif
+let has_period = match(substr, '.') != -1      &quot; position of period, if any
+let has_slash = match(substr, '/') != -1       &quot; position of slash, if any
+if (!has_period &amp;&amp; !has_slash)
+return &quot;&lt;C-X&gt;&lt;C-P&gt;&quot;                         &quot; existing text matching
+elseif ( has_slash )
+return &quot;&lt;C-X&gt;&lt;C-F&gt;&quot;                         &quot; file matching
+else
+return &quot;&lt;C-X&gt;&lt;C-O&gt;&quot;                         &quot; plugin matching
+endif
+endfunction</p>
+<p><code>inoremap &lt;tab&gt; &lt;c-r&gt;=Smart_TabComplete()&lt;CR&gt;</code></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="vim.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="filetype/rust.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="keymap.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="terminal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -168,11 +242,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="vim.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="filetype/rust.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="keymap.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="terminal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
