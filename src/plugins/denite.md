@@ -40,6 +40,20 @@ nmap <silent> [prefix]g :<C-u>Denite ghq<CR>
 
 * (denite.nvimのFloating Windowオプションを使おう)[https://qiita.com/lighttiger2505/items/d4a3371399cfe6dbdd56]
 
+```vim
+let s:denite_win_width_percent = 0.85
+let s:denite_win_height_percent = 0.7
+
+" Change denite default options
+call denite#custom#option('default', {
+    \ 'split': 'floating',
+    \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
+    \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
+    \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
+    \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
+    \ })
+```
+
 ## source
 
 <https://github.com/Shougo/denite.nvim/wiki/External-Sources>

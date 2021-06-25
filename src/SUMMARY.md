@@ -9,6 +9,7 @@
 
 # plugins
 
+- [plugins](./plugins/plugins.md)
 - [dein](./plugins/dein.md)
 - [denite](./plugins/denite.md)
 - [git](./plugins/git.md)
@@ -36,4 +37,5 @@
 - [autocmd](./autocmd.md)
 - [fold](./fold.md)
 - [signcolumn](./signcolumn.md)
+- [env](./env.md)
 

@@ -1,6 +1,7 @@
 # vim
 
-.gvimrc
+## .gvimrc
+
 ```vim
 set iminsert=0
 set imsearch=-1
@@ -19,7 +20,8 @@ set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 ```
 
-.vimrc
+## .vimrc
+
 ```vim
 filetype plugin indent on
 syntax enable
@@ -83,7 +85,8 @@ set previewheight=8
 set keywordprg=:help
 ```
 
-source init.vim
+## source init.vim
+
 ```vim
 set encoding=utf8
 let s:nvim_init = expand('~/AppData/Local/nvim/init.vim')
