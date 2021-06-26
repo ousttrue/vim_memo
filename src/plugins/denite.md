@@ -9,7 +9,9 @@ dein.toml
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
+"
 " Define mappings
+"
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
@@ -24,10 +26,25 @@ function! s:denite_my_settings() abort
                 \ denite#do_map('open_filter_buffer')
     nnoremap <silent><buffer><expr> <Space>
                 \ denite#do_map('toggle_select').'j'
+    nnoremap <silent><buffer><expr> ..
+                \ denite#do_map('move_up_path')
+
+    nnoremap <silent><buffer><expr> <C-n>
+                \ denite#do_map('move_to_next_line')
+    nnoremap <silent><buffer><expr> <C-p>
+                \ denite#do_map('move_to_previous_line')
 endfunction
 
+"
+" custom
+"
 call denite#custom#var('file/rec', 'command',['rg', '--files', '--glob', '!.git'])
 call denite#custom#var('grep', 'command', ['rg', '--threads', '1'])
+" call denite#custom#kind('directory', 'default_action', 'cd')
+
+"
+" start denite
+"
 nmap <silent> [prefix]<Space> :<C-u>DeniteProjectDir -buffer-name=files file/rec buffer<CR>
 nmap <silent> [prefix]b :<C-u>Denite buffer<CR>
 nmap <silent> [prefix]g :<C-u>Denite ghq<CR>
@@ -43,8 +60,6 @@ nmap <silent> [prefix]g :<C-u>Denite ghq<CR>
 ```vim
 let s:denite_win_width_percent = 0.85
 let s:denite_win_height_percent = 0.7
-
-" Change denite default options
 call denite#custom#option('default', {
     \ 'split': 'floating',
     \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
@@ -53,6 +68,10 @@ call denite#custom#option('default', {
     \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
     \ })
 ```
+
+## 概要
+
+source => filter => sort => match => action
 
 ## source
 
@@ -63,10 +82,11 @@ call denite#custom#option('default', {
 
 ### ghq
 
+## bookmark
+
 ## action
 
 ```vim
-call denite#custom#kind('directory', 'default_action', 'cd')
 ```
 
 ## auto-action

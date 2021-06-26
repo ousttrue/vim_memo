@@ -17,7 +17,10 @@
 
 # lsp(LanguageServerProtocol)
 
-- [lsp](./lsp/lsp.md)
+- [nvim-lsp](./lsp/nvim-lsp.md)
+- [vim-lsp](./lsp/vim-lsp.md)
+- [coc](./lsp/coc.md)
+- [ale](./lsp/ale.md)
 
 # filetype
 
