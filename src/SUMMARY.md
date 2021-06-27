@@ -1,7 +1,11 @@
 # vim
 
 - [vim](./vim.md)
+
+# nvim
+
 - [nvim](./nvim.md)
+- [lua](./nvim/lua.md)
 
 # keymap
 
