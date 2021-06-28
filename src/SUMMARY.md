@@ -6,6 +6,7 @@
 
 - [nvim](./nvim.md)
 - [lua](./nvim/lua.md)
+- [luv](./nvim/luv.md)
 
 # keymap
 

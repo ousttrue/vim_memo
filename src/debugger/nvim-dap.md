@@ -23,3 +23,20 @@ repo = 'nvim-telescope/telescope-dap.nvim'
 
 `$APPDATA/../Local/Temp/nvim/dap.log`
 
+
+## DAPInstall
+
+<https://github.com/Pocco81/DAPInstall.nvim>
+
+```toml
+[[plugins]]
+repo = 'Pocco81/DAPInstall.nvim'
+```
+
+## nvim-lua
+
+```toml
+[[plugins]]
+repo = 'jbyuki/one-small-step-for-vimkind'
+```
+
