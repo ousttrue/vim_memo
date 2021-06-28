@@ -41,8 +41,6 @@
 
 - [nvim-dap](./debugger/nvim-dap.md)
 - [vimspector](./debugger/vimspector.md)
-- termdebug
-- NeoDebug
 
 # completion
 
