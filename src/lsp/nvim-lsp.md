@@ -5,7 +5,7 @@
 <https://github.com/neovim/nvim-lspconfig>
 
 
-[Neovim LSP、DAP、Fuzzy Finder](https://ichi.pro/neovim-lsp-dap-fuzzy-finder-105774289289312)
+[Neovim LSP、DAP、Fuzzy Finder](https://medium.com/swlh/neovim-lsp-dap-and-fuzzy-finder-60337ef08060)
 
 
 <https://github.com/kabouzeid/nvim-lspinstall>
