@@ -46,10 +46,6 @@
 - [fuzzy_finder](./fuzzy_finder/fuzzy_finder.md)
 - [denite](./fuzzy_finder/denite.md)
 
-## filetype
-
-- [filetype](./filetype/filetypes.md)
-- [rust](./filetype/rust.md)
 
 ## lsp(LanguageServerProtocol)
 
@@ -67,6 +63,7 @@
 
 ## other
 
+- [filetype](./filetypes.md)
 - [terminal](./terminal.md)
 - [colorschema](./colorschema.md)
 - [buffer](./buffer.md)

@@ -1,5 +1,6 @@
 # rust
 
+* <https://github.com/simrat39/rust-tools.nvim/>
 * <https://sharksforarms.dev/posts/neovim-rust/>
 
 ## rust-analyzer
