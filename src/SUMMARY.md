@@ -1,14 +1,13 @@
 
 [vim_memo](./prefix.md)
 
+# Packer による Packer 管理と lua による設定
+
+- [packer](./packer.md)
+
 # LSP と DAP
 
-## LanguageServer
-
 - [nvim-lsp](./lsp/nvim-lsp.md)
-
-## DebugAdapter
-
 - [nvim-dap](./debugger/nvim-dap.md)
 
 ## Languages

@@ -1,5 +1,7 @@
 # nvim-dap
 
+<https://github.com/mfussenegger/nvim-dap/blob/master/doc/dap.txt>
+
 - <https://medium.com/swlh/neovim-lsp-dap-and-fuzzy-finder-60337ef08060>
 - <https://alpha2phi.medium.com/neovim-dap-enhanced-ebc730ff498b>
 
